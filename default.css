@@ -1,0 +1,101 @@
+/* To create global variable in CSS use this :root functionality  */
+:root {
+    --mainColour: #eaeaea;
+    --secondaryColour: #fff;
+
+    --borderColour: #c1c1c1;
+
+
+    --mainText: red;
+    --secondaryText: #4b5156;
+    --linkText: #17a2b8;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    color: var(--maintext);
+}
+
+p,
+li,
+span,
+label,
+input,
+textarea {
+    color: var(--secondaryText);
+}
+
+a {
+    color: var(--linkText);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-size: 56px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+
+.s1 {
+    overflow: auto;
+
+    background-color: var(--mainColour);
+    border-bottom: 1px solid var(--borderColour);
+}
+
+.s2 {
+    overflow: auto;
+
+    background-color: var(--secondaryColour);
+    border-bottom: 1px solid var(--borderColour);
+}
+
+.main-container {
+    width: 1200px;
+
+    /* Top/bottom margin is 0 and left right is centred */
+    margin: 0 auto;
+}
+
+/* Media screen identifies screen size and specifies what action to take for those screens 
+When the screen width becomes less that 1200 the following actions are triggered  */
+@media screen and (max-width : 1200px) {
+    .main-container {
+        /* This means the container will be 95% of the size of the parent element so leaves margin */
+        width: 95%;
+    }
+}
